@@ -12,10 +12,11 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
 class LinearRegression: # use scikit-learn documentation as reference structure
-    def __init__(self, tol = 1e-6, learning_rate = 0.01): 
+    def __init__(self, tol = 1e-6, learning_rate = 0.01, max_iter = 10000): 
         self.tol = tol # tolerance will be convergence critera for grad descent
         self.learning_rate = learning_rate
         self.fitted = False
+        self.max_iter = max_iter
 
     def fit(self, x: Union[np.ndarray, list, pd.DataFrame, spmatrix], y: Union[np.ndarray, list, pd.DataFrame, spmatrix]):
         # x should have format: [[x1,x2...], [x1,x2,...]] (sub arrays are different observations)
@@ -87,8 +88,8 @@ class LinearRegression: # use scikit-learn documentation as reference structure
             W (np.ndarray): Initial weights.
             b (float): Initial bias term.
         '''
-        
-        while True: 
+
+        for _ in range(self.max_iter):
             dw, db, grad = self.calc_grad(self.x, self.y, self.W, self.b)
             if np.linalg.norm(grad) < self.tol:
                 break
