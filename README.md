@@ -39,7 +39,6 @@ As someone passionate about both software engineering and machine learning, I be
 linear-regression-scratch/
 ├── data/                 # Sample CSVs or generated data
 ├── linear_regression.py  # Core model implementation
-├── utils.py              # Helpers for plotting, metrics, etc.
 ├── test_model.py         # Sample usage / evaluation
 └── README.md             # This file
 ```
@@ -70,7 +69,6 @@ _Add visuals here if available._
 
 ## Future Extensions
 
-- Add support for multivariate linear regression
 - Implement L2 regularization (Ridge Regression)
 - Compare performance with scikit-learn
 - Support live plotting during training
@@ -81,4 +79,5 @@ _Add visuals here if available._
 
 - [A Visual Intro to Linear Regression Math](https://bharathikannann.github.io/blogs/a-visual-intro-to-linear-regression-math/)
 - [Linear Regression - A Visual Introduction To (Almost) Everything You Should Know](https://mlu-explain.github.io/linear-regression/)
+- [Multiple Linear Regression and Visualization in Python](https://aegis4048.github.io/mutiple_linear_regression_and_visualization_in_python)
 - Personal notes on linear algebra and optimization
